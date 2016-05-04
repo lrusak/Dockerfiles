@@ -1,4 +1,4 @@
-FROM libreelec/python
+FROM libreelec/python:1.0.1
 MAINTAINER docker@libreelec.tv
 
 RUN wget -O - https://github.com/SickGear/SickGear/archive/release_0.11.11.tar.gz | tar xzf - \

@@ -1,4 +1,4 @@
-FROM libreelecarm/python
+FROM libreelecarm/python:1.0.1
 MAINTAINER docker@libreelec.tv
 
 RUN apk add --update autoconf \

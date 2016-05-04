@@ -1,4 +1,4 @@
-FROM libreelecarm/python
+FROM libreelecarm/python:1.0.1
 MAINTAINER docker@libreelec.tv
 
 RUN wget -O - https://github.com/CouchPotato/CouchPotatoServer/archive/build/3.0.1.tar.gz | tar xzf - \

@@ -21,13 +21,14 @@ RUN apk add --update g++ \
   && pip install --no-cache-dir lxml \
   && pip install --no-cache-dir pyOpenSSL \
   && apk del --purge g++ \
-             gcc \
-             libffi-dev \
-             make \
-             libxml2-dev \
-             libxslt-dev \
-             openssl-dev \
-             python-dev \
-             py-pip \
-  && rm -rf /var/cache/apk/* /root/.cache \
+                     gcc \
+                     libffi-dev \
+                     make \
+                     libxml2-dev \
+                     libxslt-dev \
+                     openssl-dev \
+                     python-dev \
+                     py-pip \
+  && rm -rf /var/cache/apk/* \
+  && rm -rf /root/.cache \
   && rm -rf /tmp/*

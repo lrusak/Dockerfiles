@@ -15,12 +15,12 @@ RUN apk add --update g++ \
                      python \
                      python-dev \
                      py-pip \
-  && pip install cheetah \
-  && pip install configobj \
-  && pip install feedparser \
-  && pip install lxml \
-  && pip install pyOpenSSL \
-  && apk del g++ \
+  && pip install --no-cache-dir cheetah \
+  && pip install --no-cache-dir configobj \
+  && pip install --no-cache-dir feedparser \
+  && pip install --no-cache-dir lxml \
+  && pip install --no-cache-dir pyOpenSSL \
+  && apk del --purge g++ \
              gcc \
              libffi-dev \
              make \
@@ -29,5 +29,5 @@ RUN apk add --update g++ \
              openssl-dev \
              python-dev \
              py-pip \
-  && rm -rf /var/cache/apk/* \
+  && rm -rf /var/cache/apk/* /root/.cache \
   && rm -rf /tmp/*

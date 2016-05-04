@@ -26,12 +26,12 @@ RUN apk add --update autoconf \
   && wget -O - https://github.com/sabnzbd/sabnzbd/archive/1.0.1.tar.gz | tar xzf - \
   && mv /sabnzbd-1.0.1 /sabnzbd \
   && cd /sabnzbd \
-  && apk del autoconf \
-             automake \
-             g++ \
-             gcc \
-             make \
-             python-dev \
+  && apk del --purge autoconf \
+                     automake \
+                     g++ \
+                     gcc \
+                     make \
+                     python-dev \
   && rm -rf /root/par2cmdline* \
   && rm -rf /root/yenc* \
   && rm -rf /var/cache/apk/* \
